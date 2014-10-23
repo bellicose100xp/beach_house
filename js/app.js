@@ -4,7 +4,7 @@
 (function () {
     'use strict';
 
-    var app = angular.module("beachHouse", []);
+    var app = angular.module("beachHouse", ["ui.router"]);
 
     app.controller("mainController", function () {
         var homes = this;
