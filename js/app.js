@@ -12,6 +12,7 @@
 
         homes.hideButtons = function(){
           homes.showButtons = !homes.showButtons;
+            return homes.showButtons;
         };
 
         homes.list = [
@@ -48,11 +49,11 @@
         $stateProvider
             .state('home',{
                 url: '/',
-                templateUrl: '/index.html'
+                templateUrl: 'main.html'
             })
-            .state("20300",{
-                url: "/20300",
-                templateUrl: "/20300.html"
+            .state('20300',{
+                url: '/20300',
+                templateUrl: '20300.html'
             })
 
     });
