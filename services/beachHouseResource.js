@@ -6,7 +6,7 @@
 
     angular
         .module("common.services")
-        .factory("beachHouseResource",beachHouseResource);
+        .factory("beachHouseResource",['$resource',beachHouseResource]);
 
     function beachHouseResource($resource){
         return $resource("/api/beachHouse/:pageId")

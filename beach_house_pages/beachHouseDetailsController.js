@@ -7,10 +7,10 @@
     angular.module("beachHouse")
         .controller("beachHouseDetailsController",beachHouseDetailsController);
 
-    function beachHouseDetailsController(home){
+    function beachHouseDetailsController(house){
         var vm = this;
 
-        vm.house = home;
+        vm.house = house;
         vm.title = " TEST TITLE";
 
     }
