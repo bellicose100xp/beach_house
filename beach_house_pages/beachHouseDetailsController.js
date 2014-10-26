@@ -7,12 +7,9 @@
     angular.module("beachHouse")
         .controller("beachHouseDetailsController",beachHouseDetailsController);
 
-    function beachHouseDetailsController(house){
+    function beachHouseDetailsController(promiseObj){
         var vm = this;
-
-        vm.house = house;
-        vm.title = " TEST TITLE";
-
+        vm.house = promiseObj;
     }
 
 }());

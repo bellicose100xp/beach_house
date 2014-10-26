@@ -14,7 +14,7 @@
             .state('home',{
                 url: '/',
                 templateUrl: 'beach_house_pages/main.html',
-                Controller: 'mainController as homes'
+                controller: 'mainController as homes'
             })
             /*
             .state('beachHousePages',{
@@ -27,12 +27,13 @@
             .state('beachHousePages',{
                 url:'/:pageId',
                 templateUrl: 'beach_house_pages/houseDetailView.html',
-                Controller: 'beachHouseDetailsController',
+                controller: "beachHouseDetailsController as vm"
+            ,
                 resolve: {
-                    beachHouseResource: "beachHouseResource", //why?
-                    house: function (beachHouseResource, $stateParams) {
+                    beachHouseResource: 'beachHouseResource',
+                    promiseObj: function (beachHouseResource, $stateParams) {
                         var pageId = $stateParams.pageId;
-                        return beachHouseResource.get({pageId:pageId}).$promise;
+                        return beachHouseResource.get({pageId: pageId}).$promise;
                     }
                 }
 
