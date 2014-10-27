@@ -1,6 +1,15 @@
 <div class="container">
-    <p>{{home.title}}</p>
-    <p>{{vm.title}}</p>
-    <p>{{vm.house.name}}</p>
-    <a ui-sref="home"> Go Home</a>
+    <div class="row"></div>
+    <div class="btn btn-info col-md-10 col-md-offset-1"><h3>{{vm.house.title}}</h3></div>
+</div>
+<div class="row">
+    <div class="lead col-md-6 col-md-offset-3 text-center">{{vm.house.name}}</div>
+</div>
+<div  class="row">
+    <section ng-repeat="image in vm.house.images" style="position:relative;width:200px;height:200px">
+        <img ng-src="{{image.src}}" class="img-thumbnail" style="width: 200px;height: 200px">
+    </section>
+</div>
+<div class="row">
+    <a ui-sref="home" class="text-center col-md-1 col-md-offset-2"> Go Home</a>
 </div>
